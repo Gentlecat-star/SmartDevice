@@ -1,5 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
+import { resetNoJs } from './utils/reset-no-js';
 import {initModals} from './modules/modals/init-modals';
+import {initStickyHeader} from './modules/sticky-header';
+import {initAccordion} from './modules/accordion';
+import {initPopupText} from './modules/popup-text';
 
 // ---------------------------------
 
@@ -9,15 +13,22 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  resetNoJs();
 
   // Modules
   // ---------------------------------
+
+  initStickyHeader();
+  initAccordion();
+  initPopupText();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
   });
+
+
 });
 
 // ---------------------------------

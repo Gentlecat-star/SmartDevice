@@ -1,0 +1,155 @@
+.main-intro {
+  position: relative;
+  top: -120px;
+  margin-bottom: -9px;
+
+  color: $color-alice-blue;
+
+  background-color: $color-black-pearl;
+
+  background-image: url('../../img/bg/intro-bg-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+
+  z-index: 1;
+
+  @include vp-1023 {
+    top: -100px;
+    margin-bottom: -20px;
+
+    background-image: url('../../img/bg/intro-bg-tablet.jpg');
+  }
+
+  @include vp-767 {
+    top: -70px;
+  }
+
+  @include retina {
+    background-image: url('../../img/bg/intro-bg-desktop@2x.jpg');
+  }
+
+  @include retina-tablet {
+    background-image: url('../../img/bg/intro-bg-tablet@2x.jpg');
+  }
+}
+
+.main-intro__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 150px;
+  padding-bottom: 130px;
+  padding-left: 9.37%;
+  min-height: 880px;
+
+  @include vp-1023 {
+    padding-top: 120px;
+    padding-bottom: 140px;
+    padding-left: 50px;
+    min-height: 640px;
+  }
+
+  @include vp-767 {
+    padding-top: 100px;
+    min-height: 560px;
+  }
+}
+
+.main-intro__title {
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-family: $ff-roboto-condensed;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  @include vp-1023 {
+    margin-bottom: 20px;
+
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.main-intro__text {
+  margin: 0;
+  margin-bottom: 40px;
+  max-width: 685px;
+
+  font-size: 22px;
+  line-height: 1.55;
+
+  @include vp-1023 {
+    margin-bottom: 50px;
+    max-width: 400px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.main-intro__button {
+  padding: 15px 25px;
+
+  font-size: 18px;
+  line-height: 25px;
+
+  background-color: $color-deep-sky-blue;
+  transition:
+    background-color $trans-default,
+    box-shadow $trans-default;
+
+  @include vp-1023 {
+    margin-left: 44px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+    padding: 10px 15px;
+    width: 100%;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &:hover {
+    background-color: $color-pacific-blue;
+    box-shadow: 0 2px 5px 1px rgba($color: $color-alice-blue, $alpha: 0.3);
+  }
+
+  @include focus {
+    outline: 1px solid $color-alice-blue;
+    outline-offset: 0;
+  }
+
+  &:active {
+    transform: translate3d(2px, 2px, 0);
+    box-shadow: none;
+  }
+}
+
+.main-intro__button-text {
+  @include vp-767 {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @include vp-767 {
+      display: inline;
+    }
+  }
+}
