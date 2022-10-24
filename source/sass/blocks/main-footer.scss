@@ -5,7 +5,7 @@
 
 .main-footer__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.36fr 1fr;
   column-gap: 30px;
   padding-top: 50px;
   padding-bottom: 55px;
@@ -101,7 +101,7 @@
 
 .main-footer__nav-list {
   display: grid;
-  grid-template-columns: repeat(2, 56.9%);
+  grid-template-columns: 1fr 1fr;
   column-gap: 30px;
   row-gap: 10px;
 
