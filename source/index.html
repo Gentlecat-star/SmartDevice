@@ -46,7 +46,7 @@
             </ul>
           </nav>
 
-          <a class="main-header__button btn" href="#">Заказать звонок</a>
+          <a class="main-header__button btn" href="feedback-form.html" data-open-modal="feedback">Заказать звонок</a>
         </div>
       </header>
 
@@ -55,7 +55,7 @@
           <div class="main-intro__inner container">
             <h1 class="main-intro__title">Печатные платы</h1>
             <p class="main-intro__text">производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <a class="main-intro__button btn" href="#" >
+            <a class="main-intro__button btn" href="#feedback" id="feedback-scroll">
               <span class="main-intro__button-text">Получить бесплатную консультацию</span>
               <span class="main-intro__button-text main-intro__button-text--mobile">Бесплатная консультация</span>
             </a>
@@ -114,7 +114,7 @@
           </div>
         </section>
 
-        <section class="about">
+        <section class="about no-js">
           <div class="about__inner container">
             <h2 class="about__title">О компании</h2>
             <div class="about__image">
@@ -129,7 +129,7 @@
                 Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
               </p>
               <p class="about__text">
-                Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+                Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.<span class="popup-text popup-text--mobile"> Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
               </p>
             </div>
             <div class="about__popup-text popup-text">
@@ -191,6 +191,43 @@
                 </a>
               </li>
             </ul>
+          </div>
+        </section>
+
+        <section class="feedback" id="feedback">
+          <h2 class="visually-hidden">Обратная связь</h2>
+          <div class="feedback__inner container">
+            <div class="feedback__image">
+              <picture>
+                <source type="image/webp" srcset="img/feedback/paper-airplane.webp 1x, img/feedback/paper-airplane@2x.webp 2x">
+
+                <img src="img/feedback/paper-airplane.png" srcset="img/feedback/paper-airplane@2x.png 2x" width="520" height="285" alt="">
+              </picture>
+            </div>
+            <div class="feedback__form form-feedback">
+              <strong class="form-feedback__title">Остались вопросы? Задайте их нам!</strong>
+              <p class="form-feedback__text">Мы проконсультируем Вас бесплатно</p>
+
+              <form class="form-feedback__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+                <fieldset>
+                  <input type="text" name="name" placeholder="Имя" required>
+                  <input type="tel" name="phoneNumber" placeholder="Телефон" required>
+                </fieldset>
+
+                <fieldset>
+                  <textarea name="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+                </fieldset>
+
+                <fieldset>
+                  <button type="submit">Задать вопрос</button>
+                  <label class="form-feedback__checkbox-agreement">
+                    <input type="checkbox" name="agreement">
+                    <span></span>
+                    <span>Я согласен на обработку  персональных данных</span>
+                  </label>
+                </fieldset>
+              </form>
+            </div>
           </div>
         </section>
       </main>
@@ -290,26 +327,36 @@
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
+          <div class="form-feedback form-feedback--vp-small">
+            <strong class="form-feedback__title form-feedback__title--vp-small">Закажите звонок</strong>
+            <p class="form-feedback__text form-feedback__text--vp-small">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
+            <form class="form-feedback__form form-feedback__form--vp-small" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+              <fieldset>
+                <input type="text" name="name" placeholder="Имя" required data-focus>
+                <input type="tel" name="phoneNumber" placeholder="Телефон" required>
+              </fieldset>
+
+              <fieldset>
+                <textarea name="question" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+              </fieldset>
+
+              <fieldset>
+                <button type="submit">Отправить</button>
+                <label class="form-feedback__checkbox-agreement">
+                  <input type="checkbox" name="agreement">
+                  <span></span>
+                  <span>Я согласен на обработку  персональных данных</span>
+                </label>
+              </fieldset>
+            </form>
+
+            <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть окно" data-close-modal>
+              <svg width="20" height="20">
+                <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>

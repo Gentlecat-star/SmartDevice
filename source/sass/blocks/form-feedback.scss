@@ -1,0 +1,250 @@
+.form-feedback {
+  color: $color-default-white;
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  &--vp-small {
+    width: 100%;
+  }
+}
+
+.form-feedback__title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 20px;
+
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &--vp-small {
+    margin-bottom: 15px;
+
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.form-feedback__text {
+  margin-bottom: 35px;
+
+  line-height: 22px;
+
+  @include vp-1023 {
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 40px;
+
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &--vp-small {
+    margin-bottom: 40px;
+  }
+}
+
+.form-feedback__form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-feedback__form fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  column-gap: 30px;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 20px;
+  }
+
+  &:last-of-type {
+    margin-top: 15px;
+    column-gap: 50px;
+
+    @include vp-767 {
+      margin-top: 10px;
+    }
+  }
+}
+
+.form-feedback__form--vp-small fieldset {
+  grid-template-columns: 1fr;
+  column-gap: 0;
+  row-gap: 20px;
+
+  &:last-of-type {
+    margin-top: 5px;
+  }
+}
+
+.form-feedback__form textarea,
+.form-feedback__form input[type="tel"],
+.form-feedback__form input[type="text"] {
+  border: none;
+  border-radius: 3px;
+  background-color: rgba($color: $color-black-pearl, $alpha: 0.15);
+
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+
+  &:focus {
+    outline: 1px solid rgba($color: $color-black-pearl, $alpha: 0.5);
+    outline-offset: 0;
+  }
+}
+
+.form-feedback__form input[type="tel"],
+.form-feedback__form input[type="text"] {
+  padding: 15px;
+}
+
+.form-feedback__form textarea {
+  grid-column: 1 / -1;
+
+  padding: 20px 15px;
+  height: 155px;
+
+  @include vp-767 {
+    height: 180px;
+  }
+}
+
+.form-feedback__form textarea::-webkit-input-placeholder,
+.form-feedback__form input[type="tel"]::-webkit-input-placeholder,
+.form-feedback__form input[type="text"]::-webkit-input-placeholder {
+  color: $color-default-white;
+}
+
+.form-feedback__form input[type="tel"].error,
+.form-feedback__form input[type="text"].error {
+  outline: 1px solid $color-torch-red;
+  outline-offset: 0;
+}
+
+.form-feedback__form button {
+  padding: 15px 25px;
+
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-default-white;
+
+  background-color: $color-black-pearl;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+
+  transition: opacity $trans-default;
+
+  @include vp-767 {
+    margin-bottom: 5px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    transition: none;
+    opacity: 0.2;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+
+    pointer-events: none;
+  }
+}
+
+.form-feedback__checkbox-agreement > input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  cursor: pointer;
+}
+
+.form-feedback__checkbox-agreement {
+  position: relative;
+  align-self: end;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba($color: $color-default-white, $alpha: 0.8);
+
+  cursor: pointer;
+
+  @include vp-1023 {
+    align-self: center;
+  }
+}
+
+.form-feedback__form--vp-small .form-feedback__checkbox-agreement {
+  padding: 0 10px;
+}
+
+.form-feedback__checkbox-agreement > input[type="checkbox"] + span {
+  flex: 0 0 15px;
+  height: 15px;
+  margin-right: 10px;
+
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+
+  transition: border-color $trans-default;
+}
+
+.form-feedback__checkbox-agreement > input[type="checkbox"]:checked + span {
+  background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.988525 2.33333L3.7778 5L7.96171 1' stroke='white'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 1.5px center;
+}
+
+.form-feedback__checkbox-agreement:hover > input[type="checkbox"] + span {
+  border-color: rgba($color: $color-black-pearl, $alpha: 0.3);
+}
+
+.form-feedback__checkbox-agreement > input[type="checkbox"]:focus + span {
+  border-color: rgba($color: $color-black-pearl, $alpha: 0.3);
+}
+
+.form-feedback__checkbox-agreement > input[type="checkbox"].error + span {
+  outline: 1px solid $color-torch-red;
+  outline-offset: 2px;
+}

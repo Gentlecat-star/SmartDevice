@@ -1,18 +1,23 @@
 const initPopupText = () => {
   const popupButton = document.querySelector('.popup-button');
-  const popupText = document.querySelector('.popup-text');
 
-  popupButton.addEventListener('click', () => {
-    if(popupText.classList.contains('is-shown')) {
-      popupButton.textContent = 'Подробнее';
+  if(popupButton) {
+    popupButton.addEventListener('click', () => {
+      const popupTextsList = document.querySelectorAll('.popup-text');
 
-      popupText.classList.remove('is-shown');
-    } else {
-      popupButton.textContent = 'Свернуть';
+      popupTextsList.forEach(popupText => {
+        if(popupText.classList.contains('is-shown')) {
+          popupButton.textContent = 'Подробнее';
 
-      popupText.classList.add('is-shown');
-    }
-  })
+          popupText.classList.remove('is-shown');
+        } else {
+          popupButton.textContent = 'Свернуть';
+
+          popupText.classList.add('is-shown');
+        }
+      });
+    })
+  }
 }
 
 export {initPopupText};

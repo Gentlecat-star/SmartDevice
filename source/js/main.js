@@ -4,6 +4,7 @@ import {initModals} from './modules/modals/init-modals';
 import {initStickyHeader} from './modules/sticky-header';
 import {initAccordion} from './modules/accordion';
 import {initPopupText} from './modules/popup-text';
+import {initFeedbackForm} from './modules/feedback-form';
 
 // ---------------------------------
 
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initAccordion();
   initPopupText();
+  initFeedbackForm();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
