@@ -1098,7 +1098,7 @@ button,
   margin-bottom: -9px;
   color: #f2f5f7;
   background-color: #041827;
-  background-image: url("../../img/bg/intro-bg-desktop.jpg");
+  background-image: url("../img/bg/intro-bg-desktop.jpg");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
@@ -1953,7 +1953,7 @@ span.popup-text.is-shown {
   .main-intro {
     top: -100px;
     margin-bottom: -20px;
-    background-image: url("../../img/bg/intro-bg-tablet.jpg");
+    background-image: url("../img/bg/intro-bg-tablet.jpg");
   }
 
   .main-intro__inner {
@@ -2423,7 +2423,7 @@ span.popup-text.is-shown {
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .main-intro {
-    background-image: url("../../img/bg/intro-bg-tablet@2x.jpg");
+    background-image: url("../img/bg/intro-bg-tablet@2x.jpg");
   }
 }
 
@@ -2461,6 +2461,6 @@ span.popup-text.is-shown {
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .main-intro {
-    background-image: url("../../img/bg/intro-bg-desktop@2x.jpg");
+    background-image: url("../img/bg/intro-bg-desktop@2x.jpg");
   }
 }
