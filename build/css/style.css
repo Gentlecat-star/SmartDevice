@@ -1562,7 +1562,7 @@ span.popup-text.is-shown {
   background-color: #00b2ff;
 }
 
-.feedback:before {
+.feedback::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -2024,7 +2024,7 @@ span.popup-text.is-shown {
     min-height: 250px;
   }
 
-  .feedback:before {
+  .feedback::before {
     display: none;
   }
 
