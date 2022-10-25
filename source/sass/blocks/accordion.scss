@@ -6,7 +6,7 @@
 
 .accordion__button {
   margin-bottom: 20px;
-  padding: 0;
+  padding: 7px 0 3px;
 
   font-family: $ff-roboto-condensed;
   font-size: 15px;
@@ -29,7 +29,7 @@
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    padding: 20px 25px 0;
+    padding: 23px 25px 0;
     margin-bottom: 0;
 
     pointer-events: all;

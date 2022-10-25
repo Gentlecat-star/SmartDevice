@@ -6,7 +6,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 50px;
+    margin-bottom: 47px;
   }
 }
 
@@ -72,16 +72,16 @@
   z-index: 2;
 
   @include vp-1023 {
-    padding-right: 30px;
+    padding: 38px 30px 30px 45px;
   }
 
   @include vp-767 {
-    padding: 30px 30px 35px;
+    padding: 30px 30px 55px;
   }
 }
 
 .features__item-icon {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   color: $color-deep-sky-blue;
 
@@ -93,7 +93,7 @@
 
 .features__item-title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 
   font-family: $ff-roboto-condensed;
   font-size: 24px;

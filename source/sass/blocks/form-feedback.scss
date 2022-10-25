@@ -11,27 +11,28 @@
 }
 
 .form-feedback__title {
-  margin: 0;
-  margin-bottom: 15px;
+  display: block;
+  margin-bottom: 11px;
 
   font-family: $ff-roboto-condensed;
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
+  letter-spacing: -0.009em;
 
   @include vp-1023 {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
-    font-size: 36px;
+    font-size: 30px;
     line-height: 42px;
   }
 
   &--vp-small {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 
     font-size: 30px;
     line-height: 42px;
@@ -39,23 +40,24 @@
 }
 
 .form-feedback__text {
-  margin-bottom: 35px;
+  margin: 0;
+  margin-bottom: 34px;
 
   line-height: 22px;
 
   @include vp-1023 {
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
 
     font-size: 14px;
     line-height: 18px;
   }
 
   &--vp-small {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 }
 
@@ -68,7 +70,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: start;
-  column-gap: 30px;
+  gap: 30px;
 
   margin: 0;
   padding: 0;
@@ -81,11 +83,15 @@
   }
 
   &:last-of-type {
-    margin-top: 15px;
+    margin-top: 14px;
     column-gap: 50px;
 
+    @include vp-1023 {
+      column-gap: 30px;
+    }
+
     @include vp-767 {
-      margin-top: 10px;
+      margin-top: 7px;
     }
   }
 }
@@ -93,7 +99,7 @@
 .form-feedback__form--vp-small fieldset {
   grid-template-columns: 1fr;
   column-gap: 0;
-  row-gap: 20px;
+  gap: 20px;
 
   &:last-of-type {
     margin-top: 5px;
@@ -146,7 +152,7 @@
 }
 
 .form-feedback__form button {
-  padding: 15px 25px;
+  padding: 13px 25px;
 
   font-family: $ff-roboto-condensed;
   font-weight: 700;
@@ -165,8 +171,14 @@
 
   transition: opacity $trans-default;
 
+  @include vp-1023 {
+    justify-self: start;
+    min-width: 265px;
+  }
+
   @include vp-767 {
     margin-bottom: 5px;
+    justify-self: stretch;
   }
 
   &:hover {
@@ -212,6 +224,10 @@
 
   @include vp-1023 {
     align-self: center;
+  }
+
+  @include vp-767 {
+    margin-left: 5px;
   }
 }
 

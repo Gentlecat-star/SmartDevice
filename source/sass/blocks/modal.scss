@@ -35,10 +35,9 @@
     display: flex;
     flex-shrink: 0;
     justify-content: center;
-    align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
+    padding: 62px 40px;
 
     @include vp-767 {
       padding: 60px 16px;
@@ -60,15 +59,17 @@
     position: relative;
 
     width: 500px;
-    padding: 40px;
+    padding: 37px 40px 40px;
+
+    border-radius: 3px;
 
     background-color: $color-deep-sky-blue;
   }
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 18px;
+    right: 16px;
     z-index: 1;
 
     width: 40px;

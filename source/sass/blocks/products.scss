@@ -5,21 +5,36 @@
 }
 
 .products__inner {
-  padding-top: 70px;
-  padding-bottom: 140px;
+  padding-top: 64px;
+  padding-bottom: 134px;
+
+  @include vp-1023 {
+    padding-top: 56px;
+    padding-bottom: 68px;
+  }
+
+  @include vp-767 {
+    padding-top: 47px;
+    padding-bottom: 79px;
+  }
 }
 
 .products__title {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 54px;
 
   font-family: $ff-roboto-condensed;
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
+  letter-spacing: -0.005em;
+
+  @include vp-1023 {
+    margin-bottom: 37px;
+  }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 29px;
 
     font-size: 28px;
     line-height: 39px;
@@ -53,7 +68,7 @@
 
   @include vp-1023 {
     grid-template-columns: 1fr;
-    gap: 30px;
+    row-gap: 23px;
   }
 }
 
@@ -61,7 +76,7 @@
   position: relative;
   display: inline-block;
 
-  padding: 50px 40px;
+  padding: 47px 40px;
   width: 100%;
   min-height: 650px;
 
@@ -72,7 +87,7 @@
   transition: filter $trans-600;
 
   @include vp-1023 {
-    padding: 40px 45px;
+    padding: 38px 45px;
     min-height: 250px;
   }
 
