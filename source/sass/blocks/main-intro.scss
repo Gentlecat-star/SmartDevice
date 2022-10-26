@@ -9,7 +9,7 @@
 
   background-image: url("../img/bg/intro-bg-desktop.jpg");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: center;
   background-size: cover;
 
   z-index: 1;
@@ -25,12 +25,12 @@
     top: -70px;
   }
 
-  @include retina {
-    background-image: url("../img/bg/intro-bg-desktop@2x.jpg");
+  @media (max-width: 1023px) and (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg/intro-bg-tablet@2x.jpg");
   }
 
-  @include retina-tablet {
-    background-image: url("../img/bg/intro-bg-tablet@2x.jpg");
+  @media (min-width: 1024px) and (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg/intro-bg-desktop@2x.jpg");
   }
 }
 

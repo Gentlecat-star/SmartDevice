@@ -709,6 +709,9 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   min-height: 100%;
   padding: 62px 40px;
@@ -1100,7 +1103,7 @@ button,
   background-color: #041827;
   background-image: url("../img/bg/intro-bg-desktop.jpg");
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: center;
   background-size: cover;
   z-index: 1;
 }
@@ -1465,6 +1468,18 @@ span.popup-text.is-shown {
   list-style-type: none;
 }
 
+.products__card-item:nth-child(3n+1) > .products__card-link {
+  background-position: -190px -116px;
+}
+
+.products__card-item:nth-child(3n+2) > .products__card-link {
+  background-position: -534px -122px;
+}
+
+.products__card-item:nth-child(3n+3) > .products__card-link {
+  background-position: -893px -110px;
+}
+
 .products__card-link {
   position: relative;
   display: inline-block;
@@ -1473,12 +1488,11 @@ span.popup-text.is-shown {
   min-height: 650px;
   color: inherit;
   outline: none;
+  background-color: rgba(0, 178, 255, 0.6);
+  background-image: url("../img/products/products-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 1493px 817px;
   overflow: hidden;
-  -webkit-transition: -webkit-filter 0.6s ease;
-  transition: -webkit-filter 0.6s ease;
-  -o-transition: filter 0.6s ease;
-  transition: filter 0.6s ease;
-  transition: filter 0.6s ease, -webkit-filter 0.6s ease;
 }
 
 .products__card-link::before {
@@ -1873,6 +1887,12 @@ span.popup-text.is-shown {
   }
 */
 
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 1.5dppx) {
+  .main-intro {
+    background-image: url("../img/bg/intro-bg-desktop@2x.jpg");
+  }
+}
+
 @media (max-width: 1023px) {
   .main-header {
     padding-top: 20px;
@@ -2019,6 +2039,18 @@ span.popup-text.is-shown {
     row-gap: 23px;
   }
 
+  .products__card-item:nth-child(3n+1) > .products__card-link {
+    background-position: -244px -550px;
+  }
+
+  .products__card-item:nth-child(3n+2) > .products__card-link {
+    background-position: -569px -315px;
+  }
+
+  .products__card-item:nth-child(3n+3) > .products__card-link {
+    background-position: -150px -360px;
+  }
+
   .products__card-link {
     padding: 38px 45px;
     min-height: 250px;
@@ -2076,6 +2108,12 @@ span.popup-text.is-shown {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .main-intro {
+    background-image: url("../img/bg/intro-bg-tablet@2x.jpg");
   }
 }
 
@@ -2348,6 +2386,18 @@ span.popup-text.is-shown {
     display: inline;
   }
 
+  .products__card-item:nth-child(3n+1) > .products__card-link {
+    background-position: -375px -299px;
+  }
+
+  .products__card-item:nth-child(3n+2) > .products__card-link {
+    background-position: -365px -538px;
+  }
+
+  .products__card-item:nth-child(3n+3) > .products__card-link {
+    background-position: -775px -394px;
+  }
+
   .products__card-link {
     padding: 30px;
   }
@@ -2421,12 +2471,6 @@ span.popup-text.is-shown {
   }
 }
 
-@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .main-intro {
-    background-image: url("../img/bg/intro-bg-tablet@2x.jpg");
-  }
-}
-
 @media (hover: hover) {
   .main-header__logo[href]:hover:not(.focus-visible) {
     opacity: 0.7;
@@ -2459,8 +2503,8 @@ span.popup-text.is-shown {
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .main-intro {
-    background-image: url("../img/bg/intro-bg-desktop@2x.jpg");
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .products__card-link {
+    background-image: url("../img/products/products-bg@2x.jpg");
   }
 }
