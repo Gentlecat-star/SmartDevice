@@ -18,6 +18,9 @@ const initFeedbackForm = () => {
   if(feedbackSection) {
     const feedbackScroll = document.querySelector('#feedback-scroll');
     feedbackScroll.addEventListener('click', onFeedbackScrollClicked);
+
+    const feedbackCheckbox = feedbackSection.querySelector('[name="agreement"]');
+    feedbackCheckbox.required = false;
   }
 }
 

@@ -38,6 +38,8 @@
   height: 55px;
   margin-right: 38px;
 
+  vertical-align: middle;
+
   @include vp-767 {
     width: 35px;
     height: 35px;
@@ -185,4 +187,3 @@
     display: none;
   }
 }
-

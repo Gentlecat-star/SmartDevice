@@ -10,7 +10,7 @@
   }
 }
 
-.form-feedback__title {
+.form-feedback strong {
   display: block;
   margin-bottom: 11px;
 
@@ -30,16 +30,16 @@
     font-size: 30px;
     line-height: 42px;
   }
-
-  &--vp-small {
-    margin-bottom: 5px;
-
-    font-size: 30px;
-    line-height: 42px;
-  }
 }
 
-.form-feedback__text {
+.form-feedback--vp-small strong {
+  margin-bottom: 5px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.form-feedback > p {
   margin: 0;
   margin-bottom: 34px;
 
@@ -55,10 +55,10 @@
     font-size: 14px;
     line-height: 18px;
   }
+}
 
-  &--vp-small {
-    margin-bottom: 36px;
-  }
+.form-feedback--vp-small p {
+  margin-bottom: 36px;
 }
 
 .form-feedback__form {

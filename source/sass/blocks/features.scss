@@ -91,7 +91,7 @@
   }
 }
 
-.features__item-title {
+.features__item h3 {
   margin: 0;
   margin-bottom: 10px;
 
@@ -106,7 +106,7 @@
   }
 }
 
-.features__item-text {
+.features__item p {
   margin: 0;
   line-height: 1.35;
 
@@ -119,6 +119,6 @@
   color: $color-alice-blue;
 }
 
-.features__item:hover .features__item-title {
+.features__item:hover h3 {
   color: $color-alice-blue;
 }

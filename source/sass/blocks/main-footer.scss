@@ -136,6 +136,8 @@
   color: inherit;
   transition: opacity $trans-default;
 
+  vertical-align: top;
+
   @include hover {
     opacity: 0.6;
   }
@@ -158,7 +160,7 @@
   }
 }
 
-.main-footer__address {
+.main-footer__contacts address {
   line-height: 20px;
   font-style: normal;
   max-width: 320px;
