@@ -19,7 +19,7 @@
   }
 }
 
-.products__title {
+.products h2 {
   margin: 0;
   margin-bottom: 54px;
 
@@ -41,7 +41,7 @@
   }
 }
 
-.products__title-option {
+.products__title {
   @include vp-767 {
     display: none;
   }

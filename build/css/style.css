@@ -1442,7 +1442,7 @@ span.popup-text.is-shown {
   padding-bottom: 141px;
 }
 
-.products__title {
+.products h2 {
   margin: 0;
   margin-bottom: 54px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1452,7 +1452,7 @@ span.popup-text.is-shown {
   letter-spacing: -0.005em;
 }
 
-.products__title-option--mobile {
+.products__title--mobile {
   display: none;
 }
 
@@ -2052,7 +2052,7 @@ span.popup-text.is-shown {
     padding-bottom: 75px;
   }
 
-  .products__title {
+  .products h2 {
     margin-bottom: 37px;
   }
 
@@ -2400,17 +2400,17 @@ span.popup-text.is-shown {
     padding-bottom: 86px;
   }
 
-  .products__title {
+  .products h2 {
     margin-bottom: 29px;
     font-size: 28px;
     line-height: 39px;
   }
 
-  .products__title-option {
+  .products__title {
     display: none;
   }
 
-  .products__title-option--mobile {
+  .products__title--mobile {
     display: inline;
   }
 
