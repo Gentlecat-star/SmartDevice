@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import { resetNoJs } from './utils/reset-no-js';
 import {initModals} from './modules/modals/init-modals';
-import {initStickyHeader} from './modules/sticky-header';
+import {StickyHeader} from './modules/sticky-header';
 import {initAccordion} from './modules/accordion';
 import {initPopupText} from './modules/popup-text';
 import {initFeedbackForm} from './modules/feedback-form';
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  initStickyHeader();
+  const stickyHeader = new StickyHeader();
   initAccordion();
   initPopupText();
   initFeedbackForm();

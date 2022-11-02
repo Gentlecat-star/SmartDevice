@@ -131,7 +131,6 @@
 
 .main-footer__nav-link {
   display: inline-block;
-  width: 100%;
   max-width: 220px;
   color: inherit;
   transition: opacity $trans-default;
@@ -164,6 +163,10 @@
   line-height: 20px;
   font-style: normal;
   max-width: 320px;
+
+  @include vp-767 {
+    margin-bottom: 6px;
+  }
 }
 
 .main-footer__phone-number-list {
@@ -175,4 +178,21 @@
   list-style-type: none;
 
   line-height: 25px;
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.main-footer__phone-number-link {
+  color: inherit;
+
+  @include hover {
+    opacity: 0.6;
+  }
+
+  @include focus {
+    outline: 1px solid $color-alice-blue-darker;
+    outline-offset: 2px;
+  }
 }

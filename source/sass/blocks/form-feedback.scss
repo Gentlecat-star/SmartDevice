@@ -152,6 +152,8 @@
 }
 
 .form-feedback__form button {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
   padding: 13px 25px;
 
   font-family: $ff-roboto-condensed;
@@ -177,6 +179,8 @@
   }
 
   @include vp-767 {
+    grid-column: auto;
+    grid-row: 1 / 2;
     margin-bottom: 5px;
     justify-self: stretch;
   }
@@ -210,6 +214,8 @@
 }
 
 .form-feedback__checkbox-agreement {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
   position: relative;
   align-self: end;
 
@@ -227,11 +233,15 @@
   }
 
   @include vp-767 {
+    grid-column: auto;
+    grid-row: 2 / 3;
     margin-left: 5px;
   }
 }
 
 .form-feedback__form--vp-small .form-feedback__checkbox-agreement {
+  grid-column: auto;
+  grid-row: 2 / 3;
   padding: 0 10px;
 }
 

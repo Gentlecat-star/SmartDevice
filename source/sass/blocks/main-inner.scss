@@ -1,0 +1,21 @@
+.main-inner {
+  position: relative;
+  top: -120px;
+
+  @include vp-1023 {
+    top: -100px;
+    margin-bottom: -100px;
+  }
+
+  @include vp-767 {
+    top: -70px;
+    margin-bottom: -70px;
+  }
+}
+
+.main-inner.no-js {
+  @media (min-width: $vp-1024) {
+    margin-bottom: -120px;
+  }
+}
+

@@ -48,10 +48,10 @@ const onFeedbackFormSubmit = (evt) => {
 const onFeedbackScrollClicked = (evt) => {
   const offsetTop = feedbackSection.offsetTop;
   const mainHeader = document.querySelector('.main-header');
-  const headerHeight = mainHeader.clientHeight;
+  const headerHeight = window.matchMedia(`(min-width:1024px)`).matches ? mainHeader.clientHeight : 0;
 
   evt.preventDefault();
-  window.scrollTo({top: offsetTop - headerHeight * 2, left: 0, behavior: 'smooth'});
+  window.scrollTo({top: offsetTop - headerHeight, left: 0, behavior: 'smooth'});
 }
 
 export { initFeedbackForm };

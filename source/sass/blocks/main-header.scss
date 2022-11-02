@@ -34,14 +34,16 @@
 
 .main-header__logo {
   display: inline-block;
-  width: 215px;
+  flex-basis: 215px;
+  flex-shrink: 0;
+  flex-grow: 0;
   height: 55px;
   margin-right: 38px;
 
   vertical-align: middle;
 
   @include vp-767 {
-    width: 35px;
+    flex-basis: 35px;
     height: 35px;
     margin-top: 5px;
   }
@@ -80,6 +82,8 @@
 }
 
 .main-header__button {
+  flex-basis: 160px;
+  flex-grow: 0;
   flex-shrink: 0;
   margin-right: 60px;
   margin-left: auto;
@@ -113,8 +117,9 @@
 }
 
 .main-nav {
+  flex-basis: auto;
+  flex-grow: 1;
   flex-shrink: 1;
-  margin-left: auto;
   margin-top: 5px;
 
   color: $color-alice-blue;
@@ -129,16 +134,25 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 
   padding: 0;
   margin: 0;
   list-style-type: none;
+
+  @include vp-1023 {
+    justify-content: flex-end;
+  }
 }
 
 .main-nav__item {
   margin-right: 27px;
+  flex-basis: 11.71vw;
+  flex-shrink: 1;
+  flex-grow: 0;
 
   @include vp-1023 {
+    flex-basis: auto;
     margin-right: 20px;
   }
 }
@@ -150,18 +164,17 @@
 }
 
 .main-nav__link {
-  display: flex;
+  display: inline-flex;
   padding-top: 10px;
   padding-bottom: 10px;
-  min-width: 225px;
 
   color: inherit;
   user-select: none;
+  vertical-align: middle;
 
   transition: opacity $trans-default;
 
   @include vp-1023 {
-    min-width: auto;
     padding: 10px;
   }
 
